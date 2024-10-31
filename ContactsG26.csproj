@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework> <!-- Changed to net7.0 -->
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" /> <!-- Version changed to 7.0.0 -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0"> <!-- Version changed to 7.0.0 -->
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\css\Styles.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\Styles.css" />
+  </ItemGroup>
+</Project>

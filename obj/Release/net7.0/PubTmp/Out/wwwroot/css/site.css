@@ -1,0 +1,22 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    background-color: #f4f4f4; /* Light background color for better contrast */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px; /* Slightly larger font size for larger screens */
+    }
+}
+
+body {
+    margin-bottom: 60px; /* Space at the bottom of the page */
+    background-color: #fff; /* White background for the body */
+    padding: 1rem; /* Padding for some breathing room */
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5); /* More noticeable focus shadow */
+}
